@@ -56,10 +56,24 @@ p{
     flex: 1;
 }
 
+.container{
+    min-height: 100%;
+}
 
 #promo , #promo > p
 {
     padding: 1%;
+}
+
+
+footer{
+    width: 100%;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.514) ;
+    position: relative;
+    padding: 1%;
+    text-align: center;
+    bottom: 0;
+    left: 0;
 }
 
 @media screen and (max-width: 786px)
