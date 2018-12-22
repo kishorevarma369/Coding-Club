@@ -1,4 +1,4 @@
-</div>
+
     <footer>
         Kishore Varma 2018 &COPY; All Rights Reserved    
     </footer>
