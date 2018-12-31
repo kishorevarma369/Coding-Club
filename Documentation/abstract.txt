@@ -1,6 +1,14 @@
 
+There are many websites that catalise Competitive programming culture . But it's really hard for Students who are
+getting started . Although Hackerrank , Codechef , CodeForces , Hacker Earth etc., try to minimize this gap by giving
+, users , problems with varying levels of difficulty for practise . But Still There's a huge gap between students 
+and the platforms . So We Aim to Develop a product and Solve this problem starting from its root which is Colleges 
+itself .  We integrate our product which is specifically designed for the students to improve their programming skills and 
+compete among themselves to improve themselves .
+
+
 Coding Club is a group of people , who are passionate about programming and they can find other people with similar interests.
-And for that we need an environiment that would increas.0e their anxiety and competetiveness among themselves . 
+And for that we need an environiment that would increase their anxiety and competetiveness among themselves . 
 
 Targets :
 
