@@ -105,10 +105,73 @@ p{
     justify-content: center;
 }
 
-#header-img-after > h1{
+.header-container1 > h1{
     text-justify: distribute;
     text-align: center;
     font-weight: 100;
+}
+
+.header-container1 , .header-container2{
+    flex: 1;
+    display: flex;
+}
+
+.header-container2{
+    flex-direction: column;
+    align-self: flex-start;
+    background: rgba(0, 0, 0, 0.5);
+    height: 100%;
+}
+
+.signup-login{
+    display: flex;
+    margin: 5% 0;
+    justify-content: center;
+    overflow: hidden;
+    flex: 1;
+    /*
+    justify-content: center;
+    background: #ff3366; */
+}
+
+.signup-login > span{
+    text-align: center;
+    padding: 1%;
+    background: black;
+}
+
+.signup-login > span:first{
+    border-right: 10px solid #fff;
+}
+
+.signup-form,.login-form{
+    /* align-content: center;
+    align-items: center;
+    justify-content: center; */
+    padding: 1%;
+    display: flex;
+}
+
+.signup-form{
+    flex-direction: column;
+    margin: 1% 23%;
+    
+}
+
+.form-row{
+    display: flex;
+    align-items: center;
+}
+
+.form-row > span{
+    flex: 1;
+    
+}
+
+.form-row input{
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2%;
+    flex: 1;
 }
 
 
