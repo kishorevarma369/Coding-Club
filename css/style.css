@@ -123,6 +123,15 @@ p{
     height: 100%;
 }
 
+.sl-active{
+    color:#ff3366;
+}
+
+#signup-link,#login-link{
+cursor: pointer;
+}
+
+
 .signup-login{
     display: flex;
     margin: 5% 0;
@@ -153,10 +162,9 @@ p{
     flex:4;
 }
 
-.signup-form{
+/* .signup-form{
     display: none;
-    
-}
+} */
 
 .form-row{
     display: flex;
