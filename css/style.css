@@ -129,9 +129,7 @@ p{
     justify-content: center;
     overflow: hidden;
     flex: 1;
-    /*
-    justify-content: center;
-    background: #ff3366; */
+    align-items: center;
 }
 
 .signup-login > span{
@@ -150,11 +148,13 @@ p{
     justify-content: center; */
     padding: 1%;
     display: flex;
+    flex-direction: column;
+    margin: 1% 23%;
+    flex:4;
 }
 
 .signup-form{
-    flex-direction: column;
-    margin: 1% 23%;
+    display: none;
     
 }
 
