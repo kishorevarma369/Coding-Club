@@ -166,6 +166,19 @@ cursor: pointer;
     display: none;
 } */
 
+.block{
+    justify-content: center;
+}
+
+.block >a{
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.form-container{
+    display: flex;
+    
+}
+
 .form-row{
     display: flex;
     align-items: center;
