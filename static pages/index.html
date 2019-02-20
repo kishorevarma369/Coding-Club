@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Tangerine" rel="stylesheet">    
+    <title>Document</title>
+</head>
+<body>
+    <header id="main-header">
+        <p id="brand">Project H & K </p>
+        <i class="fa fa-bars" id="mobile-menu-button"></i>
+        <ul id="main-nav">
+            <li>Home</li>
+            <li>Hello</li>
+            <li>Contact</li>
+            <li>About</li>
+            <i class="fa fa-close" id="mobile-menu-close-button"></i>
+        </ul>
+    </header>
+    <div class="container">
+        <div id="header-img">
+            <img src="./img/header-background.jpg" alt="">
+            <div id="header-img-after">
+                <div class="header-container1">
+                    <h1>Welcome to Coding Arena , Improve your Programming Skills</h1>
+                </div>
+                <div class="header-container2">
+                    <div class="signup-login">
+                        <span id="signup-link" class="sl-active">Sign up</span>
+                        <span id="login-link" >Login</span>
+                    </div>
+                    <form action="" class="signup-form">
+                        <div class="form-row">
+                            <span>Name</span>
+                            <input type="text" placeholder="Enter your Name">
+                        </div>
+                        <br>
+                        <div class="form-row">
+                            <span>Email</span>
+                            <input type="email" placeholder="Enter your Email">
+                        </div>
+                        <br>
+                        <div class="form-row">
+                            <span>Password</span>
+                            <input type="password" placeholder="Enter your Password">
+                        </div>
+                        <br>
+                        <div class="form-row">
+                            <span>Re-enter Password</span>
+                            <input type="password" placeholder="Re-Enter your Password">
+                        </div>
+                        <br>
+                        <div class="form-row">
+                            <input type="submit" value="submit">
+                        </div>
+                    </form>
+                    <form action="" class="login-form">
+                        <div class="form-row">
+                            <span>Email</span>
+                            <input name="email" type="email" placeholder="Enter your Email">
+                        </div>
+                        <br>
+                        <div class="form-row">
+                            <span>Password</span>
+                            <input name="pass" type="password" placeholder="Enter your Password">
+                        </div>
+                        <br>
+                        <div class="form-row">
+                            <input type="submit" value="submit">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <section id="promo">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus deserunt eaque, facilis earum rem necessitatibus, quidem unde dolores ducimus quia eveniet molestias. Voluptatem sit dicta, provident ea quos consectetur natus.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus deserunt eaque, facilis earum rem necessitatibus, quidem unde dolores ducimus quia eveniet molestias. Voluptatem sit dicta, provident ea quos consectetur natus.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus deserunt eaque, facilis earum rem necessitatibus, quidem unde dolores ducimus quia eveniet molestias. Voluptatem sit dicta, provident ea quos consectetur natus.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus deserunt eaque, facilis earum rem necessitatibus, quidem unde dolores ducimus quia eveniet molestias. Voluptatem sit dicta, provident ea quos consectetur natus.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Natus deserunt eaque, facilis earum rem necessitatibus, quidem unde dolores ducimus quia eveniet molestias. Voluptatem sit dicta, provident ea quos consectetur natus.</p>
+        </section>
+    </div>
+    <footer>
+        Kishore Varma 2018 &COPY; All Rights Reserved    
+    </footer>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script>
+        const main_nav_div=$('#main-nav')
+        const mobile_menu_close_button=$('#mobile-menu-close-button')
+        const mobile_menu_button=$('#mobile-menu-button')
+        smooth_close_func=function(){
+            main_nav_div.toggle();
+            mobile_menu_close_button.toggle();
+            mobile_menu_button.toggle();
+        }
+        $('#mobile-menu-button').click(
+            function(){
+                mobile_menu_button.toggle();
+                main_nav_div.toggle();
+                main_nav_div.css("width","50vw");
+                main_nav_div.css("padding","10%");
+                mobile_menu_close_button.toggle();
+                
+            }
+        )
+        mobile_menu_close_button.click(function(){
+            main_nav_div.css("width","0");
+            main_nav_div.css("padding","0");
+            setTimeout(smooth_close_func,1000);
+        })
+        const login_form=$('.login-form')
+        const signup_form=$('.signup-form')
+        const login_link=$('#login-link')
+        const signup_link=$('#signup-link')
+        login_form.toggle();
+        login_link.click(function(){
+            if(login_link.hasClass('sl-active')) return;
+            login_link.toggleClass('sl-active')
+            signup_link.toggleClass('sl-active')
+            signup_form.toggle();
+            login_form.toggle();
+            
+        })
+        signup_link.click(function(){
+            if(signup_link.hasClass('sl-active')) return;
+            login_link.toggleClass('sl-active')
+            signup_link.toggleClass('sl-active')
+            login_form.toggle();
+            signup_form.toggle();
+        })
+        // signup_form.toggle();
+    </script>
+</body>
+</html>
