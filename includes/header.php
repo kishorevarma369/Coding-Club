@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto|Tangerine" rel="stylesheet">    
+    <script src="js/jquery.min.js"></script>
     <title>Coding Arena</title>
 </head>
 <body>

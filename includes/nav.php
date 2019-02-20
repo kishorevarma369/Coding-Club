@@ -2,7 +2,9 @@
 <?php 
 if(isset($_SESSION['user_id']))
 { 
+    echo '<li><a href="questions.php">Questions</a></li>';
     echo '<li><a href="create.php">Create</a></li>';
+    echo '<li><a href="manage.php">Manage</a></li>';
     echo '<li><a href="logout.php">Logout</a></li>';
 }
 else

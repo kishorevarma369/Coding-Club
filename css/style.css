@@ -105,7 +105,8 @@ p{
     justify-content: center;
 }
 
-.header-container1 > h1{
+/* .header-container1 >  */
+h1,h2{
     text-justify: distribute;
     text-align: center;
     font-weight: 100;
@@ -166,17 +167,48 @@ cursor: pointer;
     display: none;
 } */
 
+textarea{
+    overflow: hidden;
+}
+
+textarea:hover{
+    overflow-y: scroll;
+}
+
+.form-row > input[type='submit'],input[type='button']{
+    cursor: pointer;
+}
+
+.tests{
+    resize: none;
+    margin: 1% 0;
+}
+
+.tests > *{
+    margin: 0 1%;
+}
+
 .block{
     justify-content: center;
 }
 
 .block >a{
+    padding: 1%;
     background: rgba(0, 0, 0, 0.5);
 }
 
 .form-container{
     display: flex;
-    
+    flex-direction: column;
+    margin: 0 10%;
+}
+
+.form-container >h1{
+    margin: 2%;
+}
+
+.form-container >.form-row{
+    margin: 1% 0;
 }
 
 .form-row{
@@ -189,12 +221,22 @@ cursor: pointer;
     
 }
 
-.form-row input{
+.form-row input,textarea{
     background: rgba(0, 0, 0, 0.5);
     padding: 2%;
     flex: 1;
 }
 
+
+.score-div{
+    display: flex;
+    flex-direction: column;
+    align-content:space-between;
+}
+
+.score-div>*{
+    flex: 1;
+}
 
 #promo , #promo > p
 {
@@ -213,6 +255,72 @@ footer{
     left: 0;
     font-size: 20px;
     font-weight: 100;
+}
+
+.question-container{
+    display: flex;
+}
+
+.question-content-container{
+    flex:3;
+}
+
+.question-content-container>* , .question-stats-container>*{
+    margin: 3% 2%;
+}
+
+.question-stats-container{
+    flex:1;  
+    height: auto;
+    align-self: flex-start;
+}
+
+.question-stats-container > span{
+    text-align:center;
+}
+
+
+.question-content-container,
+.question-stats-container{
+    background: rgba(0, 0, 0, 0.5);
+    margin: 2%;
+    padding: 1%;
+}
+
+#code-area{
+    width: 96%;
+}
+
+.myb{
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2%;
+}
+
+.question-row{
+    padding: 1%;
+    margin: 1% 0;
+}
+
+.questions-container > .question-content-container{
+    padding: 0;
+}
+
+.question-row > h2{
+    text-align: left;
+}
+
+.question-options{
+    display: flex;
+}
+
+.question-options>p{
+    flex:1;
+    margin: 1%;
+    color:#585858;
+}
+
+.question-options>.myb{
+    padding: 1%;
 }
 
 @media screen and (max-width: 786px)

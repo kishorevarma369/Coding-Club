@@ -2,7 +2,6 @@
         Coding Arena 2018 &COPY; All Rights Reserved    
     </footer>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="js/jquery.min.js"></script>
     <script>
         const main_nav_div=$('#main-nav')
         const mobile_menu_close_button=$('#mobile-menu-close-button')
