@@ -6,7 +6,7 @@ function process_input($data) {
     $data = htmlspecialchars($data);
     return $data;
 }
-
+$qid=0;
 if(!isset($_SESSION['user_id'])) header('Location: '.'/index.php');
 if(isset($_GET['qname']))
 {
@@ -17,6 +17,7 @@ if(isset($_GET['qname']))
     {
         $row=mysqli_fetch_assoc($res);
         $qname=$row['qname'];
+        $qid=$row['qid'];
         $qcontent=$row['qcontent'];
         $points=$row['points'];
         $given_by=$row['given_by'];
@@ -45,6 +46,9 @@ if(isset($_GET['qname']))
                 </p>
                 <textarea name="" id="code-area" rows="30"></textarea>
                 <button class="myb">Submit</button>
+                <div id="result-container">
+
+                </div>
             </div>
             <div class="question-stats-container">
                 <h2>Question Stats</h2> 
@@ -62,4 +66,15 @@ if(isset($_GET['qname']))
             
         </div>
     </div>
+    <script>
+        var code=$('#code-area')[0];
+        var result_container=$('#result-container')[0];
+        $('.myb').click(function(){
+            result_container.innerHTML='';
+            $.post('submit-solution.php',{'code':code.value,'qid':<?php echo $qid;?>},function(res){
+                console.log(res);
+                result_container.innerHTML=res;
+            })
+        })
+    </script>
 <?php include('includes/footer.php'); ?>
