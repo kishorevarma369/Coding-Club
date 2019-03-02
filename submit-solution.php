@@ -37,6 +37,36 @@ function get_tests($ques,$dbcon)
     return array();
 }
 include_once('includes/dbcon.php');
+
+function check($given,$expected)
+{
+
+    $gl=strlen($given);
+    $el=strlen($expected);
+    // echo $gl." ".$el;
+    $i=0;$j=0;
+    while($i<$gl&&$j<$el)
+    {
+        if($given[$i]==$expected[$j]){
+            $i++;
+            $j++;
+        } 
+        else if($given[$i]=='\n') $i++;
+        else if($given[$j]=='\n') $j++;
+        else return false;
+    }
+    while($i<$gl)
+    {
+        if($given[$i]=='\n') $i++;
+    }
+    while($j<$el)
+    {
+        if($expected[$j]=='\n') $j++;
+    }
+    if($i!=$gl||$j!=$el) return false;
+    return true;
+}
+
 if(isset($_POST['code'])&&isset($_POST['qid'])&&isvalid($_POST['qid'],$dbcon))
 {
     $t=new compiler();
@@ -54,8 +84,8 @@ if(isset($_POST['code'])&&isset($_POST['qid'])&&isvalid($_POST['qid'],$dbcon))
             $test_res[$i]=array();
             if($output=($t->run_program($test['input'])))
             {
-                // if(check($test['input'],$test_output))
-                if(true)
+                // echo $output." ".$test['output'];
+                if(check($test['output'],$output))
                 {
                     $test_res[$i]['points']=$test['points'];
                     $test_res[$i]['yes']=1;
